@@ -3,7 +3,8 @@
 clase de experiencia de usuario
 
 to run locally
-npm install
+
+        npm install
 
 to run dev
 

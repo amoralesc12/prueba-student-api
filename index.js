@@ -4,18 +4,10 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
 
-//Import de modulos user defined
-const studentsService = require("./services/students");
+//instancias de routes
+const studentsRouter = require("./routes/studentRoutes");
 
-app.get("/alumno", async function (req, res) {
-  const students = await studentsService.getStudents();
-  //TODO: MOSTRAR CLASES DONDE ESTA MATRICULADO
-  res.send(students);
-});
-
-app.post("/alumno", function (req, res) {
-  const alumno = req.body;
-  res.send({});
-});
+//Definicion de routes
+app.use("/alumno", studentsRouter);
 
 app.listen(3000);

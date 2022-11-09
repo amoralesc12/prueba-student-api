@@ -8,6 +8,6 @@ app.use(bodyParser.json());
 const studentsRouter = require("./routes/studentRoutes");
 
 //Definicion de routes
-app.use("/alumno", studentsRouter);
+app.use("/student", studentsRouter);
 
 app.listen(3000);
